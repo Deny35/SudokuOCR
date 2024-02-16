@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddFragment">
+
+    <LinearLayout
+        android:id="@+id/sudokuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <pl.denys.karol.sudokuocr.SudokuBoardView
+            android:id="@+id/sudokuBoardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <GridLayout
+            android:id="@+id/numberPad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:columnCount="4"
+            android:rowCount="2">
+
+            <!-- Number keypad buttons -->
+            <Button
+                android:id="@+id/button_1"
+                android:onClick="onNumberButtonClick"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button_2"
+                android:onClick="onNumberButtonClick"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button_3"
+                android:onClick="onNumberButtonClick"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/button_4"
+                android:onClick="onNumberButtonClick"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button_5"
+                android:onClick="onNumberButtonClick"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button_6"
+                android:onClick="onNumberButtonClick"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/button_7"
+                android:onClick="onNumberButtonClick"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button_8"
+                android:onClick="onNumberButtonClick"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button_9"
+                android:onClick="onNumberButtonClick"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/clear_nutton"
+                android:onClick="onNumberButtonClick"
+                android:text="Clear" />
+
+            <Button
+                android:id="@+id/check_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check" />
+
+        </GridLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/loadImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Load image" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Save" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

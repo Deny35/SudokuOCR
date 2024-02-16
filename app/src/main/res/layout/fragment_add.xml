@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.AddFragment">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_grid"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/sudokuContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <pl.denys.karol.sudokuocr.SudokuBoardView
+            android:id="@+id/sudokuBoardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+    />
+
+        <GridLayout
+            android:id="@+id/numberPad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.4"
+            android:columnCount="4"
+            android:rowCount="3">
+
+            <!-- Number keypad buttons -->
+            <Button
+                android:id="@+id/button_1"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="1"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_2"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="2"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_3"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="3"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="Delete"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_4"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="4"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_5"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="5"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_6"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="6"
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/check_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_blue"
+                android:text="Check"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_7"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="7"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_8"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="8"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_9"
+                android:backgroundTint="@color/light_blue"
+                android:onClick="onNumberButtonClick"
+                android:text="9"
+                android:textColor="@color/black" />
+
+        </GridLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/loadImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Load image"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/light_blue"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Save"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/light_blue"/>
+
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:textColor="@color/black"
+                    android:backgroundTint="@color/light_blue"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
